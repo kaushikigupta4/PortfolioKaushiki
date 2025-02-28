@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+.font-kaushan {
+  font-family: 'Kaushan Script', cursive;
+}
+.font-macondo {
+  font-family: 'Macondo Swash Caps', cursive
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a90e2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #357ac9;
+}
+body:{
+  background-color: #EBEDFF;
+}
