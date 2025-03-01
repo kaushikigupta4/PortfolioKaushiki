@@ -12,19 +12,19 @@ const skills = [
 
 const CourseSection = () => {
   return (
-    <div className="flex w-full flex-wrap justify-start gap-3">
+    <div className="flex w-full flex-wrap justify-start gap-1 mx-auto">
       {skills.map((skill, index) => (
         <div
           key={index}
           className="flex flex-col gap-1 m-1 items-center justify-center 
-            w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[160px] lg:h-[160px] 
-            bg-[#EBEDFF] rounded-lg text-center p-1 shadow-md"
+          w-[6rem] h-[6rem] md:w-[10rem] md:h-[10rem] 
+          bg-[#EBEDFF] rounded-lg text-center p-2 shadow-md"
         >
           <div className="image">
             <img 
               src={skill.img} 
               alt={skill.name} 
-              className="bg-white w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] lg:w-[90px] lg:h-[90px] 
+              className="bg-white w-[4rem] h-[4rem] md:w-[7rem] md:h-[7rem]  
               p-2 sm:p-3 rounded-full" 
             />
           </div>

@@ -1,12 +1,12 @@
-import ProjectBody from "./ProjectBody";
+import ProjectBody from "./ProjectBody.jsx";
 
 const ProjectMain = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-8 px-6 md:px-12 max-w-[1350px] mx-auto justify-start items-start mt-16">
+    <div className="flex flex-col gap-8 px-6 md:px-12 max-w-[1350px] mx-auto justify-start items-center  mt-16 lg:mt-0">
       
    
-      <div className="w-full md:w-auto">
-        <h1 className="relative z-10 text-4xl font-bold text-black bg-gray-300 p-2">
+      <div>
+        <h1 className="text-6xl mt-4 text-[#6146E0] text-center w-full mt-10 ">
           Projects
         </h1>
       </div>

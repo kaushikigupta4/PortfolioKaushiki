@@ -7,20 +7,20 @@ const AboutMeMain = () => {
     <div className="flex flex-col gap-10">
       
 
-      <div className="flex flex-col md:flex-row gap-8 px-6 md:px-12 max-w-[1350px] mx-auto justify-center items-center mt-16">
+      <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-12 max-w-[1350px] mx-auto justify-center items-center mt-12">
       
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center">
           <AboutMePic />
         </div>
 
      
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:w-1/2">
           <AboutMeText />
         </div>
       </div>
 
    
-      <div className="mt-10 md:mt-16 px-6">
+      <div className=" w-[100%] mt-10 md:mt-16 px-6">
         <Education />
       </div>
 

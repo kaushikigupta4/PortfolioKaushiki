@@ -1,6 +1,6 @@
 const ContactMeInput = () => {
   return (
-    <div className="flex flex-col p-3 gap-4 sm:gap-3 xs:gap-2 h-full justify-center mx-auto md:text-left sm:text-center w-[90%]">
+    <div className="flex flex-col p-3 gap-4 sm:gap-3 xs:gap-2 h-full justify-center mx-auto md:text-left sm:text-center w-[90%] lg:p-25 md:p-10">
       
     
       <input 

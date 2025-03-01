@@ -5,7 +5,7 @@ import image4 from "../../assets/github.png";
 
 const ContactMeText = () => {
   return (
-    <div className="w-[90%] pl-17 pr-0">
+    <div className="w-[90%] md:pl-17 md:p-10 lg:p-25 mx-auto p-3">
      
       <h1 className="text-4xl sm:text-3xl xs:text-2xl uppercase ">
         Let's work <br /> together
@@ -17,7 +17,7 @@ const ContactMeText = () => {
       </h3>
 
      
-      <div className="icons flex gap-3 sm:gap-2 xs:gap-1 items-center py-2 mt-4 sm:mt-3 xs:mt-2">
+      <div className="icons flex gap-3 sm:gap-2 xs:gap-1 items-center justify-center py-2 mt-4 sm:mt-3 xs:mt-2">
         <a href="https://link1.com" target="_blank" rel="noopener noreferrer">
           <img src={image1} className="w-9 h-9 sm:w-7 sm:h-7 xs:w-6 xs:h-6" alt="WhatsApp" />
         </a>

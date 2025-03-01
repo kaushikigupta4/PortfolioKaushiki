@@ -73,12 +73,12 @@ const ProjectBody = () => {
     }
   };
   return (
-    <div className="flex gap-4 m-3 py-15 max-w-[1350px]  mx-auto justify-center items-center bg-[#d4effa] ">
+    <div className="flex gap-4 sm:m-3 py-15 max-w-[1350px]  mx-auto justify-center items-center bg-[#d4effa] ">
       <div
-        className="left arrow text-4xl mx-4 cursor-pointer "
+        className="text-4xl sm:mx-4 cursor-pointer "
         onClick={leftArrowHandler}
       >
-        <MdKeyboardArrowLeft className="text-gray-500 text-5xl" />
+        <MdKeyboardArrowLeft className="text-gray-500 sm:text-5xl text-4xl" />
       </div>
       <div
         className="flex flex-nowrap overflow-x-auto gap-4 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-blue-500 hover:scrollbar-thumb-blue-700 pb-3"
@@ -87,7 +87,7 @@ const ProjectBody = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="w-[380px] h-[500px] bg-white flex flex-col rounded-xl shadow-lg m-[0.5px] flex-none"
+            className="sm:w-[380px] sm:h-[500px] w-full h-[400px] bg-red-100 flex flex-col rounded-xl shadow-lg  flex-none"
           >
             <div className="w-full p-4 py-3 h-[250px]">
               <div className="relative group ">
@@ -104,33 +104,43 @@ const ProjectBody = () => {
               </div>
             </div>
 
-            <div className="name font-bold p-4 py-2">
-              <button className="mt-2 p-3  bg-[#6146E0] w-[40%] text-white w-auto ">
+            <div className="flex font-bold p-4 py-2 items-center justify-center">
+              <button className="mt-2 p-3  bg-[#6146E0] w-[40%] text-white w-auto  ">
                 {project.name}
               </button>
             </div>
 
-            <div className="text-gray-600 m-3 p-2">
+            <div className="text-gray-600 m-3 p-2 hidden md:block">
               {project.description.length > 200
                 ? project.description.slice(0, 200) + "..."
                 : project.description}
               {project.description.length > 200 && (
                 <span className="font-bold cursor-pointer text-xl">
-                  {" "}
+               
                   read more
                 </span>
               )}
             </div>
+            <div className="block md:hidden px-2 m-3">
+  <a
+    href="#"
+    className="text-[#6146E0] font-semibold text-lg underline underline-offset-4 decoration-2 
+               hover:text-[#4B32B7] transition-all duration-300"
+  >
+    Link
+  </a>
+</div>
+
 
             <div className="icons flex p-4"></div>
           </div>
         ))}
       </div>
       <div
-        className="right arrow text-4xl mx-4 cursor-pointer"
+        className="right arrow  sm:mx-4 cursor-pointer"
         onClick={rightArrowHandler}
       >
-        <MdKeyboardArrowRight className="text-gray-500 text-5xl" />
+        <MdKeyboardArrowRight className="text-gray-500  text-4xl sm:text-5xl" />
       </div>
     </div>
   );

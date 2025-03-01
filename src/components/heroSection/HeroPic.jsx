@@ -3,7 +3,7 @@ import { FiSquare } from "react-icons/fi";
 
 const HeroPic = () => {
   return (
-    <div className="relative flex items-center justify-center p-6 w-full">
+    <div className="relative flex items-center justify-center p-6 w-full sm:mt-20">
       
   
       <div className="absolute flex justify-center items-center animate-pulse">
@@ -11,7 +11,7 @@ const HeroPic = () => {
       </div>
 
    
-      <div className="relative z-10 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[600px]">
+      <div className="relative z-10 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[500px]">
         <img src={image} alt="Hero" className="w-full h-auto" />
       </div>
 
