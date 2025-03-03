@@ -3,9 +3,8 @@ import image1 from "../../assets/download (4).jpg";
 import image2 from "../../assets/foodwebsite.jpg";
 import image3 from "../../assets/travelSite.jpg";
 import image4 from "../../assets/task.jpg";
-import { useRef } from "react";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+
 const projects = [
   {
     sn: 1,
@@ -59,89 +58,51 @@ const projects = [
 ];
 
 const ProjectBody = () => {
-  const scrollRef = useRef(null);
-  const rightArrowHandler = () => {
-    console.log("arrow clicked");
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
-    }
-  };
-  const leftArrowHandler = () => {
-    console.log("arrow clicked");
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
-    }
-  };
   return (
-    <div className="flex gap-4 sm:m-3 py-15 max-w-[1350px]  mx-auto justify-center items-center bg-[#d4effa] ">
-      <div
-        className="text-4xl sm:mx-4 cursor-pointer "
-        onClick={leftArrowHandler}
-      >
-        <MdKeyboardArrowLeft className="text-gray-500 sm:text-5xl text-4xl" />
-      </div>
-      <div
-        className="flex flex-nowrap overflow-x-auto gap-4 scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-blue-500 hover:scrollbar-thumb-blue-700 pb-3"
-        ref={scrollRef}
-      >
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="sm:w-[380px] sm:h-[500px] w-full h-[400px] bg-red-100 flex flex-col rounded-xl shadow-lg  flex-none"
-          >
-            <div className="w-full p-4 py-3 h-[250px]">
-              <div className="relative group ">
-              
-                <img
-                  src={project.image}
-                  className="h-[230px] w-full  object-cover rounded-xl cursor-pointer duration-300  "
-                  alt={project.name}
-                />
-                <div
-                  className="absolute bg-black opacity-0 group-hover:opacity-40    
-                       transition-opacity duration-300 inset-0"
-                ></div>
+    <div className="flex flex-col md:flex-row flex-wrap gap-1 md:gap-2 lg:gap-5 lg:p-12 bg-[#E7F8FF] justify-center">
+      {projects.map((project, index) => {
+        return (
+          <div key={index} className=" h-auto projectcard relative group">
+           
+            <div className="image relative md:w-[300px] flex p-8 md:p-0 md:bg-white mx-auto items-center justify-center ">
+              <img src={project.image} alt="" className="object-cover"/>
+            </div>
+
+       
+            <div className="details absolute top-0 left-1/2 -translate-x-1/2 w-full h-full hidden group-hover:block transition-opacity duration-500 ease-in-out md:w-[300px] ">
+          
+              <div className="absolute inset-0 bg-gray-900 opacity-70"></div>
+
+              <div className="relative z-10 ">
+           
+                <div className=" p-3 text-blue-200 font-bold text-lg w-auto text-center md:te">
+                  {project.name}
+                </div>
+\
+                <div className="text-sm text-white relative text-center px-3">
+                  {project.description.length > 100 ? (
+                    <>
+                      {project.description.slice(0, 80)}
+                      <span className="cursor-pointer font-bold text-blue-400">
+                        {" "}
+                        ...Read more
+                      </span>
+                    </>
+                  ) : (
+                    project.description
+                  )}
+                </div>
+
+             
+                <div className="icons absolute left-1/2 -translate-x-1/2 p-3">
+                <a href=""><FaGithub className="text-blue-300  text-3xl" /></a>
+                  
+                </div>
               </div>
             </div>
-
-            <div className="flex font-bold p-4 py-2 items-center justify-center">
-              <button className="mt-2 p-3  bg-[#6146E0] w-[40%] text-white w-auto  ">
-                {project.name}
-              </button>
-            </div>
-
-            <div className="text-gray-600 m-3 p-2 hidden md:block">
-              {project.description.length > 200
-                ? project.description.slice(0, 200) + "..."
-                : project.description}
-              {project.description.length > 200 && (
-                <span className="font-bold cursor-pointer text-xl">
-               
-                  read more
-                </span>
-              )}
-            </div>
-            <div className="block md:hidden px-2 m-3">
-  <a
-    href="#"
-    className="text-[#6146E0] font-semibold text-lg underline underline-offset-4 decoration-2 
-               hover:text-[#4B32B7] transition-all duration-300"
-  >
-    Link
-  </a>
-</div>
-
-
-            <div className="icons flex p-4"></div>
           </div>
-        ))}
-      </div>
-      <div
-        className="right arrow  sm:mx-4 cursor-pointer"
-        onClick={rightArrowHandler}
-      >
-        <MdKeyboardArrowRight className="text-gray-500  text-4xl sm:text-5xl" />
-      </div>
+        );
+      })}
     </div>
   );
 };

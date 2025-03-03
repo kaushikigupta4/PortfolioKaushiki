@@ -9,13 +9,12 @@ const SkillsMain = () => {
       id="skills"
     >
       <div>
-        <h1 className="text-6xl mt-4 text-[#6146E0]  text-center w-full mt-10 ">
+        <h1 className="text-6xl sm:text-7xl font-extrabold text-[#6146E0] text-center mt-10 tracking-wide">
           Skills
         </h1>
       </div>
 
       <div className="flex flex-col sm:flex-col-reverse sm:flex-row">
-       
         <div>
           <SkillsPic />
         </div>
@@ -23,8 +22,9 @@ const SkillsMain = () => {
           <SkillsText />
         </div>
       </div>
-      <div><SkillItem /></div>
-     
+      <div>
+        <SkillItem />
+      </div>
     </div>
   );
 };

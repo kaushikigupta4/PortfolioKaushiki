@@ -5,16 +5,16 @@ import WebSection from "./WebSection";
 import CourseSection from "./CourseSection";
 
 const SkillItem = () => {
-    const [skills, setSkills] = useState("programming");
+      const [skills, setSkills] = useState("programming");
 
-    const handleHover = (e) => {
-      setSkills(e.target.dataset.value);
-    };
+  const handleHover = (e) => {
+    setSkills(e.target.dataset.value);
+  };
   return (
     <div>
-       <div className="flex flex-col font-bold gap-4 p-4 m-4 items-center md:flex-row mx-auto">
+       <div className="flex flex-col font-bold items-center w-full mt-4 mb-4 gap-3 md:flex-row">
         {["programming", "web", "developer", "course"].map((skill) => (
-          <div key={skill} className="group relative w-64 px-6 py-2 font-bold text-md rounded-lg shadow-md text-center lg:p-6 lg:text-xl">
+          <div key={skill} className="group relative w-64 px-6 py-2 font-bold text-md rounded-lg shadow-md text-center ">
             <p
               data-value={skill}
               className="text-[#6146E0] cursor-pointer hover:text-blue-800 hover:scale-105"
@@ -29,7 +29,7 @@ const SkillItem = () => {
           </div>
         ))}
       </div>
-      <div className="p-4 m-4 w-full lg:text-left sm:text-center">
+      <div className="w-full lg:text-left sm:text-center  p-2">
         {skills === "programming" && <ProgrammingSection />}
         {skills === "developer" && <ToolsSection />}
         {skills === "web" && <WebSection />}

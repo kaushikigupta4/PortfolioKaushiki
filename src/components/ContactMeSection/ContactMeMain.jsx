@@ -4,9 +4,10 @@ import ContactMeText from "./ContactMeText";
 const ContactMeMain = () => {
   return (
     <div className="w-full mx-auto relative mt-20" id="contact">
-      <div className="text-5xl sm:text-4xl xs:text-3xl bg-white p-3 mb-5 text-blue-700 text-center lg:text-7xl">
-        Contact Me
-      </div>
+      <div className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-blue-700 text-center bg-white p-4 mb-6 tracking-wide">
+  Connect With Me
+</div>
+
 
       <div className="flex flex-col  md:flex-row  p-2 bg-[#EBEDFF] rounded-lg">
         <div className="md:flex-1 md:w-1/2">

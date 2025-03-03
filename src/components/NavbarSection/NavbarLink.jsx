@@ -15,7 +15,7 @@ const NavbarLink = () => {
         links.map((link,index)=>{
             return(
             <div key={index} className="group ">
-            <Link className="cursor-pointer hover:transition-all duration-500 hover:text-white" to={link.section}>{link.link}
+            <Link className="cursor-pointer hover:transition-all duration-500 hover:text-white"  smooth={true} duration={1000} to={link.section}>{link.link}
             </Link>
             <div className="mx-auto w-0 h-[1px] transition-all duration-500 group-hover:w-full sm:group-hover:w-[100%] bg-[#6146E0]"></div>
 
