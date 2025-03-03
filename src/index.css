@@ -1,8 +1,11 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+
+@import "tailwindcss";
+
+
+
 .font-kaushan {
   font-family: 'Kaushan Script', cursive;
 }
@@ -27,7 +30,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #357ac9;
-}
-body:{
-  background-color: #EBEDFF;
 }

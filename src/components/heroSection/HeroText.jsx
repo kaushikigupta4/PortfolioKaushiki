@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
-import resume from "../../assets/kaushikiiresume.pdf";
+
+import resume1 from "/../kaushikiiresume.pdf"
 import { MdDownload } from "react-icons/md";
 const HeroText = () => {
   return (
@@ -22,7 +23,7 @@ const HeroText = () => {
       <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 justify-center items-center md:justify-start lg:gap-12">
         <div >
           <a
-            href={resume}
+            href={resume1}
             
             download
             target="_blank"
