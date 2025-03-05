@@ -2,6 +2,7 @@ import image1 from "../../assets/whatsapp.png";
 import image2 from "../../assets/instagram.png";
 import image3 from "../../assets/linkedin.png";
 import image4 from "../../assets/github.png";
+import {motion} from "framer-motion";
 
 const ContactMeText = () => {
   return (
@@ -18,21 +19,21 @@ const ContactMeText = () => {
 
      
       <div className="icons flex gap-3 sm:gap-2 xs:gap-1 items-center justify-center py-2 mt-4 sm:mt-3 xs:mt-2 md:items-start md:justify-start">
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <motion.a href="https://wa.link/dyc2h8" target="_blank" rel="noopener noreferrer " whileHover={{scale:1.1}}>
           <img src={image1} className="w-9 h-9 sm:w-7 sm:h-7 xs:w-6 xs:h-6 md:w-12 md:h-12" alt="WhatsApp" />
-        </a>
+        </motion.a>
 
-        <a href="https://link2.com" target="_blank" rel="noopener noreferrer">
+        <motion.a href="https://www.instagram.com/kaushiiki_gupta_?igsh=eXFvd2RrNmZibmRz" target="_blank" rel="noopener noreferrer" whileHover={{scale:1.1}}>
           <img src={image2} className="w-9 h-9 sm:w-7 sm:h-7 xs:w-6 xs:h-6 md:w-12 md:h-12" alt="Instagram" />
-        </a>
+        </motion.a>
 
-        <a href="https://link3.com" target="_blank" rel="noopener noreferrer">
+        <motion.a href="https://github.com/kaushikigupta4" target="_blank" rel="noopener noreferrer" whileHover={{scale:1.1}}>
           <img src={image3} className="w-9 h-9 sm:w-7 sm:h-7 xs:w-6 xs:h-6 md:w-12 md:h-12" alt="LinkedIn" />
-        </a>
+        </motion.a>
 
-        <a href="https://link4.com" target="_blank" rel="noopener noreferrer">
+        <motion.a href="https://github.com/kaushikigupta4" target="_blank" rel="noopener noreferrer" whileHover={{scale:1.1}}>
           <img src={image4} className="w-9 h-9 sm:w-7 sm:h-7 xs:w-6 xs:h-6 md:w-12 md:h-12" alt="GitHub" />
-        </a>
+        </motion.a>
       </div>
     </div>
   );

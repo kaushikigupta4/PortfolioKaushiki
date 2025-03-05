@@ -3,15 +3,6 @@ import { Link } from "react-scroll";
 const resume1 = "/kaushikiresume.pdf";
 
 import { MdDownload } from "react-icons/md";
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * A React component that renders a hero section
- * with a heading, a subheading, a paragraph of text, and two buttons.
- * The first button downloads a PDF resume, and the second button
- * links to the "contact" section of the website.
- * @returns A JSX element representing the hero section
- */
-/******  dba4bcaf-6bc6-479c-a7e3-b23f756f60de  *******/
 const HeroText = () => {
   return (
     <div className="flex flex-col h-full justify-center mx-auto text-center md:text-left">
