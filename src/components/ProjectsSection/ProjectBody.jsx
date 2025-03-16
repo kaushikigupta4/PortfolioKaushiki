@@ -51,21 +51,20 @@ const ProjectBody = () => {
         let isSmallScreen = window.matchMedia("(max-width: 360px)").matches;
         let moveDistance = isSmallScreen ? 50 : index % 2 === 0 ? -200 : 200;
         let xMove = isSmallScreen ? 0 : moveDistance;
-        let yMove = isSmallScreen ? 50 : 0; // Move from bottom for small screens
+        let yMove = 100; // Start from bottom for all screens
 
         gsap.fromTo(
           el,
-          { opacity: 0, x: xMove, y: yMove },
+          { opacity: 0, y: yMove }, // Start position (from the bottom)
           {
             opacity: 1,
-            x: 0,
-            y: 0,
-            duration: 0.3,
+            y: 0, // End at normal position
+            duration: 0.6,
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 90%",
-              end: "top 50%",
+              start: "top 90%", // Start triggering when the element reaches 90% of the viewport height
+              end: "top 50%", // End triggering at 50% of the viewport height
               toggleActions: "play reverse play reverse",
               scrub: 1,
             },
