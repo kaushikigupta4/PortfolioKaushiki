@@ -13,3 +13,37 @@
         }}
         *dragDirectionLock='true'
         *  useScroll      />
+
+
+        const projects = [
+  {
+    sn: 1,
+    name: "ApplyEase (Job Portal Website)",
+    description:
+      "Developed a full-stack job portal using ReactJS, Express, NodeJS, and MongoDB, enabling authentication, job postings, and user applications. The front end was built with React Vite and ShadCN UI, integrating Redux Toolkit for state management...",
+    image: image1,
+    link: "",
+  },
+  {
+    sn: 2,
+    name: "Shoplify (E-Commerce Website)",
+    description:
+      "Designed and developed a full-stack e-commerce platform using the MERN stack, offering authentication, cart management, and secure payments...",
+    image: image2,
+    link: "https://github.com/kaushikigupta4/Shoplify",
+  },
+  {
+    sn: 3,
+    name: "Aryavarta (Tourism Website)",
+    description:
+      "Developed as part of Smart India Hackathon with a 6-member team, Aryavarta is a tourism-focused website enhancing travel experiences...",
+    image: image3,
+  },
+  {
+    sn: 4,
+    name: "Portfolio Website",
+    description:
+      "Designed and developed a personal portfolio website showcasing projects, skills, and experiences...",
+    image: image4,
+  },
+];

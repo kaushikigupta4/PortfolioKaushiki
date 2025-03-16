@@ -1,13 +1,12 @@
-import image from "../../assets/nav.avif";
+import image from "../../assets/Businesswoman-bro.svg";
 import { FiSquare } from "react-icons/fi";
 import { motion } from "framer-motion";
+
 
 const HeroPic = () => {
   return (
     <div className="relative flex items-center justify-center p-6 w-full mt-20">
-      <motion.div className="absolute flex justify-center items-center animate-pulse" transition={{duration:2, repeat:Infinity,ease:"easeInOut"}} animate={{y:[0,-20, 0]}}>
-        <FiSquare className="h-[305px] w-[305px] sm:h-[300px] md:h-[355px] md:w-[355px] lg:h-[655px] lg:w-[655px] w-auto text-[#C1C7F9] blur-md ]" />
-      </motion.div>
+     
 
       <motion.img
         src={image}

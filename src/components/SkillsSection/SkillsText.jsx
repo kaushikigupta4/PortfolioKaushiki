@@ -12,7 +12,7 @@ const SkillsText = () => {
      
     
 
-      <div className="mt-4 text-gray-700 lg:text-left sm:text-center max-w-2xl w-full lg:text-xl lg:p-3 p-4 text-center bg-[#E7F8FF] lg:p-10  lg:text-5xl rounded-2xl">
+      <div className="mt-4 lg:text-left sm:text-center max-w-2xl w-full lg:text-xl lg:p-3 p-4 text-center bg-gradient-to-br from-[#0A0F2C] via-[#15295A] to-[#1E3A8A] lg:p-10  lg:text-5xl rounded-2xl  text-gray-300">
         I have experience in full-stack development, working with React.js, Node.js, Express, and MongoDB to build web applications. I am familiar with state management using Redux and Zustand, as well as database management with SQL and NoSQL. I use Git and GitHub for version control.
       </div>
 

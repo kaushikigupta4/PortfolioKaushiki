@@ -4,8 +4,9 @@ import image3 from "../../assets/icons8-css3.svg";
 import image4 from "../../assets/icons8-react.svg";
 import image5 from "../../assets/tailwind-css.svg";
 import image6 from "../../assets/icons8-nodejs.svg";
-import image7 from "../../assets/Express.svg";
+import image7 from "../../assets/icons8-express-js.svg";
 import image8 from "../../assets/MongoDB.svg";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "JavaScript", img: image1 },
@@ -20,24 +21,28 @@ const skills = [
 
 const WebSection = () => {
   return (
-    <div className="flex w-full flex-wrap justify-start gap-1 mx-auto">
+    <div className="flex w-full flex-wrap justify-center mx-auto">
       {skills.map((skill, index) => (
-        <div
+        <motion.div
           key={index}
-          className="flex flex-col gap-1 m-1 items-center justify-center 
-          w-[6rem] h-[6rem] md:w-[10rem] md:h-[10rem] bg-[#EBEDFF] 
-          rounded-lg text-center p-2 shadow-md"
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="flex flex-col items-center justify-center 
+                     w-[6rem] h-[6rem] md:w-[8rem] md:h-[8rem] 
+                      rounded-full text-center shadow-md"
         >
           <div className="image">
             <img 
               src={skill.img} 
               alt={skill.name} 
-              className="w-[4rem] h-[4rem] md:w-[7rem] md:h-[7rem]
-              rounded-full bg-white p-2" 
+              className="w-[4rem] h-[4rem] md:w-[6rem] md:h-[6rem] 
+                         rounded-full"
             />
           </div>
-          <div className="text text-xs sm:text-sm font-semibold">{skill.name}</div>
-        </div>
+          
+        </motion.div>
       ))}
     </div>
   );
