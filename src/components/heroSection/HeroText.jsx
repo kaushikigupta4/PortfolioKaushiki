@@ -56,7 +56,8 @@ const HeroText = () => {
         Passionate about building scalable, user-friendly{" "}
         <br className="hidden sm:block" />
         web apps. Reach out for collaboration <br className="hidden sm:block" />
-        and innovative digital solutions!
+        and innovative digital solutions
+        
       </p>
 
       <div className="flex flex-col md:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 justify-center items-center md:justify-start lg:gap-12">
