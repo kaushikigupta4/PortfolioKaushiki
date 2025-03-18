@@ -94,7 +94,7 @@ const ProjectBody = () => {
             <div className="name text-[#6146E0] font-semibold text-center text-2xl lg:mb-40 mb-0">
               {project.name}
             </div>
-
+   <div>
             <div className="image relative md:w-[380px] md:h-[250px] w-[300px] flex justify-center group">
               <img src={project.image} alt="" className="" />
 
@@ -111,7 +111,7 @@ const ProjectBody = () => {
               </div>
 
               <div
-                className={`description text-blue-800 z-2 lg:top-1/4 bottom-[-160px] absolute 
+                className={`description text-blue-800 z-2 lg:top-1/4 bottom-[-120px] lg:bottom-[-160px] absolute 
                   ${isEven ? "lg:right-85" : "lg:left-85"}  
                   md:w-[450px] md:h-[150px] w-[300px] p-3 
                   text-white bg-white/10 backdrop-blur-lg 
@@ -125,6 +125,7 @@ const ProjectBody = () => {
                   read more
                 </span>
               </div>
+            </div>
             </div>
           </div>
         );

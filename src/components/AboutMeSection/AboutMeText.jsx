@@ -33,7 +33,8 @@ const AboutMeText = () => {
   return (
     <div
       ref={textRef}
-      className="flex flex-col items-center lg:items-start text-center md:text-left w-full md:max-w-full mx-auto bg-gradient-to-br from-[#0A0F2C] via-[#15295A] to-[#1E3A8A] p-6 sm:p-10 md:p-12 shadow-xl rounded-lg relative"
+      className="flex flex-col items-center lg:items-start text-center md:text-left w-full md:max-w-full mx-auto bg-gradient-to-br from-[#081B4B] via-[#143D81] to-[#1E5AB5]
+ p-6 sm:p-10 md:p-12 shadow-xl rounded-lg relative"
     >
       <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold text-[#6146E0]">
         About Me

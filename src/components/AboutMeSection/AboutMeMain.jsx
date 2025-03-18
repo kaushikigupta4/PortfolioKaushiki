@@ -44,7 +44,7 @@ const AboutMeMain = () => {
           <AboutMePic />
         </div>
 
-        <div className="w-full lg:w-1/2 m-7 bg-gradient-to-br from-[#0A0F2C] via-[#15295A] to-[#1E3A8A] p-2 gsapabout">
+        <div className="w-full lg:w-1/2 m-7  p-2 gsapabout">
           <AboutMeText />
         </div>
       </div>

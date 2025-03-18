@@ -56,7 +56,7 @@ const Education = () => {
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}
             className="flex flex-col lg:flex-row items-center p-6 md:p-3 sm:p-2
-            rounded-xl bg-gradient-to-br from-[#0A0F2C] via-[#15295A] to-[#1E3A8A] w-full transition-all hover:scale-105
+            rounded-xl bg-gradient-to-br from-[#081B4B] via-[#143D81] to-[#1E5AB5]  w-full transition-all hover:scale-105
             md:w-full lg:gap-3 shadow-lg shadow-indigo-500/50 transition-all duration-300"
           >
             {/* Icon */}
