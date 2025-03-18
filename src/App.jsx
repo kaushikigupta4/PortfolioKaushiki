@@ -23,7 +23,7 @@ import HeroMain from "./components/heroSection/HeroMain"
       <NavbarMain />
       <HeroMain/>
       <SubHeroSection/>
-     
+     <AboutMeMain/>
       <SkillsMain/>
       <ProjectMain/>
       <ContactMeMain/>
