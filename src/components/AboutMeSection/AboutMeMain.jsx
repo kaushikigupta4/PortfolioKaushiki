@@ -10,13 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutMeMain = () => {
   useEffect(() => {
     const elements = gsap.utils.toArray(".gsapabout");
-
+  
     elements.forEach((el, index) => {
       let isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
-      let moveDistance = isSmallScreen ? 50 : index % 2 === 0 ? -120 : 120;
-      let xMove = isSmallScreen ? 0 : moveDistance; // No X movement for small screens
-      let yMove = isSmallScreen ? 80 : 0; // Move from bottom on small screens 📱
-
+      let moveDistance = isSmallScreen ? 20 : index % 2 === 0 ? -60 : 60;
+      let xMove = isSmallScreen ? 0 : moveDistance;
+      let yMove = isSmallScreen ? 40 : 0;
+  
       gsap.fromTo(
         el,
         { opacity: 0, x: xMove, y: yMove },
@@ -28,18 +28,19 @@ const AboutMeMain = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 85%",
-            end: "bottom top",
-            toggleActions: "play reverse play reverse",
+            start: "top 90%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
           },
         }
       );
     });
   }, []);
+  
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col lg:flex-row gap-8 p-4 md:px-6  max-w-[1350px] mx-auto justify-center items-center">
+      <div className="flex flex-col lg:flex-row gap-8 p-4 md:px-6 md:px-12 max-w-[1350px] mx-auto justify-center items-center">
         <div className="w-full lg:w-1/2 flex justify-center gsapabout">
           <AboutMePic />
         </div>
