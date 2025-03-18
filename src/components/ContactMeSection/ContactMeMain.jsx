@@ -8,9 +8,7 @@ const ContactMeMain = () => {
   return (
     <div  className="w-full mx-auto relative mt-60 lg:mt-0" id="contact">
       {/* Heading */}
-      <div className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-[#6146E0] text-center p-4 mb-6 tracking-wide drop-shadow-[0_0_40px_rgba(90,60,220,0.9)]">
-        Connect With Me
-      </div>
+      
 
       {/* Contact Section */}
       <div className="flex flex-col md:flex-row p-4 bg-gradient-to-br from-[#0A0F2C] via-[#15295A] to-[#1E3A8A] rounded-lg">

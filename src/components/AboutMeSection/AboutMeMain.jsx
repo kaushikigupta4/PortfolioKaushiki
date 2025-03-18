@@ -39,7 +39,7 @@ const AboutMeMain = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col lg:flex-row gap-8 px-6 md:px-12 max-w-[1350px] mx-auto justify-center items-center">
+      <div className="flex flex-col lg:flex-row gap-8 p-4 md:px-6  max-w-[1350px] mx-auto justify-center items-center">
         <div className="w-full lg:w-1/2 flex justify-center gsapabout">
           <AboutMePic />
         </div>
