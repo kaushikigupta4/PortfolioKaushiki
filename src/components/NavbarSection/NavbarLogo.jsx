@@ -2,7 +2,7 @@ const NavbarLogo = () => {
   return (
     <div>
       <h1 className="hidden font-bold md:block text-4xl md:text-5xl 
-          bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-500 
+        bg-gradient-to-r from-purple-800 via-blue-700 to-blue-400 
                  text-transparent bg-clip-text font-extrabold text-3xl sm:text-4xl md:text-5xl 
                  drop-shadow-lg font-macondo">
         Kaushiki Gupta
