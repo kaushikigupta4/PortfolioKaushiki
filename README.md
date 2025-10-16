@@ -1,8 +1,61 @@
-# React + Vite
+# PortfolioKaushiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **personal portfolio website** built with **React** and **Vite** to showcase skills, projects, and contact information.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 About
+
+This is a responsive, single-page portfolio website for **Kaushiki Gupta**, featuring:
+
+- About Me section  
+- Projects showcase  
+- Skills and expertise  
+- Contact form  
+
+
+It’s designed to highlight personal projects and professional skills in a clean, modern layout.
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** React, Vite, tailwindCSS  
+- **Build Tool:** Vite  
+- **Styling:** CSS modules and global styles  
+
+---
+
+## 📁 Folder Structure
+```
+PortfolioKaushiki/
+├─ public/
+├─ src/
+│ ├─ assets/
+│ ├─ components/
+│ │ ├─ AboutMeSection/
+│ │ ├─ ContactMeSection/
+│ │ ├─ NavbarSection/
+│ │ ├─ ProjectsSection/
+│ │ ├─ SkillsSection/
+│ │ ├─ heroSection/
+│ │ └─ SubHeroSection.jsx
+│ ├─ App.jsx
+│ ├─ App.css
+│ ├─ index.css
+│ └─ main.jsx
+├─ notes.txt
+├─ .gitignore
+├─ README.md
+├─ package.json
+├─ package-lock.json
+├─ vite.config.js
+└─ eslint.config.js
+```
+
+### Deployment
+
+Deployed Portfolio: https://kaushikiportfolio.vercel.app/
+
+GitHub Repository: https://github.com/kaushikigupta4/PortfolioKaushiki
+
