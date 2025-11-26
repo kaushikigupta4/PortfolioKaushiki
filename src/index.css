@@ -32,6 +32,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #357ac9;
 }
- body{
-  background-color:#000957;
- }
+body{
+  background: linear-gradient(
+  135deg,
+  #FFFFFF 0%,
+  #F6B1CE 30%,
+  #CCE5CF 70%,
+  #FFFFFF 100%
+);
+
+}

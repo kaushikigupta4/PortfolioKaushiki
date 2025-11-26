@@ -10,19 +10,15 @@ const AboutMeText = () => {
   useEffect(() => {
     gsap.fromTo(
       textRef.current,
-      {
-        opacity: 0,
-        y: 50, // Start position (from below)
-      },
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
-        y: 0, // End position (original position)
-        duration: 1,
+        y: 0,
+        duration: 1.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: textRef.current,
-          start: "top 90%", // Trigger when 90% of the element is in the viewport
-          end: "top 50%", // End triggering at 50% of the element
+          start: "top 90%",
           toggleActions: "play none none none",
           scrub: 1,
         },
@@ -33,29 +29,52 @@ const AboutMeText = () => {
   return (
     <div
       ref={textRef}
-      className="flex flex-col items-center lg:items-start text-center md:text-left w-full md:max-w-full mx-auto bg-gradient-to-br from-[#081B4B] via-[#143D81] to-[#1E5AB5]
- p-6 sm:p-10 md:p-12 shadow-xl rounded-lg relative"
+      className="
+      flex flex-col items-center lg:items-start text-center md:text-left 
+      w-full mx-auto 
+      bg-white 
+      p-6 sm:p-10 md:p-12 
+      
+      rounded-3xl 
+     
+    "
     >
-      <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold text-[#6146E0]">
+      {/* Title */}
+      <h1
+        className="text-4xl md:text-4xl lg:text-5xl font-extrabold"
+        style={{ color: "#1581BF" }}  // blue from your palette
+      >
         About Me
       </h1>
 
-      <p className="text-gray-300 mt-4 text-base sm:text-lg md:text-md leading-relaxed">
-        👋 Hi, I’m Kaushiki, a passionate Full Stack Developer who loves building
-        scalable and user-friendly web applications. With a strong foundation in MERN stack
-        (MongoDB, Express.js, React.js, Node.js) and other modern technologies, I bring ideas to life
-        through elegant and efficient code.
+      {/* Paragraph 1 */}
+      <p
+        className="mt-4 text-base sm:text-lg leading-relaxed font-medium"
+        style={{ color: "#475569" }}  // soft slate
+      >
+        Hi, I’m Kaushiki — a passionate Full Stack Developer who loves building
+        scalable, intuitive, and high-quality web applications. I specialize in the
+        MERN stack (MongoDB, Express.js, React.js, Node.js) along with modern
+        libraries and tools.
       </p>
 
-      <p className="text-gray-300 mt-4 sm:mt-5 text-base sm:text-lg md:text-md leading-relaxed">
-        💡 I thrive on solving problems, optimizing performance, and creating seamless user experiences.
-        Whether it's crafting intuitive UI/UX design or architecting robust backend systems,
-        I enjoy every aspect of development.
+      {/* Paragraph 2 */}
+      <p
+        className="mt-4 text-base sm:text-lg leading-relaxed font-medium"
+        style={{ color: "#475569" }}
+      >
+        💡 I enjoy solving problems, optimizing performance, and turning complex concepts
+        into clean, functional, and user-friendly experiences. From building seamless UI/UX 
+        to developing robust backend systems — I love it all.
       </p>
 
-      <p className="hidden sm:block mt-4 sm:mt-5 text-base sm:text-lg md:text-md leading-relaxed text-gray-300">
-        🚀 My goal is to continuously learn and innovate, collaborating with like-minded individuals
-        to create meaningful digital solutions. Let's build something amazing together!
+      {/* Paragraph 3 */}
+      <p
+        className="hidden sm:block mt-4 text-base sm:text-lg leading-relaxed font-medium"
+        style={{ color: "#475569" }}
+      >
+        I continuously learn, improve, and collaborate with amazing people to
+        create meaningful digital solutions. Let’s build something impactful together!
       </p>
     </div>
   );

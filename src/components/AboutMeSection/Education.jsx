@@ -30,18 +30,16 @@ const Education = () => {
     sectionRefs.current.forEach((el) => {
       gsap.fromTo(
         el,
-        {
-          opacity: 0,
-          scale: 0.9, // Slightly smaller initially
-        },
+        { opacity: 0, scale: 0.9 },
         {
           opacity: 1,
           scale: 1,
-          duration: 0.3, // Fast animation
+          duration: 0.3,
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: el, // Trigger when the element enters the viewport
-            start: "top 95%", // Ensures it appears instantly as it reaches near the viewport
-            toggleActions: "play reverse play reverse", // Smooth re-appear on scroll
+            trigger: el,
+            start: "top 95%",
+            toggleActions: "play none none reverse",
           },
         }
       );
@@ -50,28 +48,43 @@ const Education = () => {
 
   return (
     <div className="px-4 sm:px-6 md:px-12 mx-auto">
-      <div className="flex flex-col lg:flex-row gap-5">
+      <div className="flex flex-col lg:flex-row gap-6">
+
         {eduSection.map((edu, index) => (
           <div
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}
-            className="flex flex-col lg:flex-row items-center p-6 md:p-3 sm:p-2
-            rounded-xl bg-gradient-to-br from-[#081B4B] via-[#143D81] to-[#1E5AB5]  w-full transition-all hover:scale-105
-            md:w-full lg:gap-3 shadow-lg shadow-indigo-500/50 transition-all duration-300"
+            className="
+              flex flex-col lg:flex-row items-center gap-4
+              p-6 w-full
+              rounded-3xl bg-white 
+              
+              transition-all hover:scale-105 
+            "
           >
             {/* Icon */}
-            <div className="flex items-center justify-center w-16 h-16">
-              <FaGraduationCap className="w-16 h-16 text-[#4F75FF]" />
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#F6B1CE]/20">
+              <FaGraduationCap className="w-10 h-10 text-[#1581BF]" />
             </div>
 
             {/* Text Content */}
-            <div className="text-center sm:text-left p-3">
-              <p className="text-lg text-white font-bold">{edu.name}</p>
-              <p className="text-gray-200">{edu.college}</p>
-              <p className="text-gray-300">Grade: {edu.grade}</p>
+            <div className="text-center sm:text-left">
+              <p className="text-lg font-bold" style={{ color: "#1581BF" }}>
+                {edu.name}
+              </p>
+              <p className="mt-1 font-medium text-gray-700">
+                {edu.college}
+              </p>
+              <p className="mt-1 text-gray-600 font-medium">
+                Grade:{" "}
+                <span className="font-semibold" style={{ color: "#3DB6B1" }}>
+                  {edu.grade}
+                </span>
+              </p>
             </div>
           </div>
         ))}
+
       </div>
     </div>
   );

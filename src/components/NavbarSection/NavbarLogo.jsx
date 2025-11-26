@@ -1,16 +1,27 @@
 const NavbarLogo = () => {
   return (
     <div>
-      <h1 className="hidden font-bold md:block text-4xl md:text-5xl 
-        bg-gradient-to-r from-purple-800 via-blue-700 to-blue-400 
-                 text-transparent bg-clip-text font-extrabold text-3xl sm:text-4xl md:text-5xl 
-                 drop-shadow-lg font-macondo">
+      {/* Desktop Logo */}
+      <h1
+        className="hidden md:block font-extrabold text-4xl sm:text-5xl font-macondo"
+        style={{
+          background: "linear-gradient(90deg,#1581BF,#3DB6B1,#F6B1CE)",
+          WebkitBackgroundClip: "text",
+          color: "transparent"
+        }}
+      >
         Kaushiki Gupta
       </h1>
 
-      <h1 className="font-extrabold block md:hidden text-3xl 
-          bg-gradient-to-r from-purple-900 via-blue-700 to-indigo-400 
-          text-transparent bg-clip-text font-macondo">
+      {/* Mobile Logo */}
+      <h1
+        className="block md:hidden font-extrabold text-3xl font-macondo"
+        style={{
+          background: "linear-gradient(90deg,#F6B1CE,#3DB6B1,#1581BF)",
+          WebkitBackgroundClip: "text",
+          color: "transparent"
+        }}
+      >
         KG
       </h1>
     </div>

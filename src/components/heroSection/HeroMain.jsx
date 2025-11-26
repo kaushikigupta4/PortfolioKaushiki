@@ -11,38 +11,50 @@ const HeroMain = () => {
 
     lines.forEach((line, index) => {
       gsap.to(line, {
-        x: "120vw", // Move smoothly across the screen
-        duration: 8 + index * 1.5, // Vary duration for a natural effect
+        x: "120vw",
+        duration: 8 + index * 1.5,
         repeat: -1,
         ease: "power1.inOut",
-        delay: index * 1.2, // More staggered animation start
+        delay: index * 1.2,
       });
     });
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-[#0A0F2C]">
-      {/* Background Light Streaks */}
-      <div ref={bgRef} className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+    <div className="relative overflow-hidden bg-white">
+      {/* Pastel Background Streaks */}
+      <div
+        ref={bgRef}
+        className="absolute top-0 left-0 w-full h-full overflow-hidden z-0"
+      >
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="light-line absolute w-[180px] h-full bg-gradient-to-r from-transparent via-[#4F75FF] to-transparent opacity-60 blur-[120px]"
+            className="light-line absolute w-[200px] h-full opacity-40 blur-[70px]"
             style={{
               top: `${i * 15}%`,
-              left: `${-200 + i * 50}px`, // Slightly staggered start positions
-              transform: "rotate(-20deg)", // Softer angle for a more natural look
-              filter: "blur(120px)", // Stronger blur for a seamless blend
+              left: `${-200 + i * 60}px`,
+              transform: "rotate(-18deg)",
+              filter: "blur(90px)",
+              background: `linear-gradient(90deg,
+                transparent,
+                ${i % 2 === 0 ? "#F6B1CE" : "#1581BF"},
+                ${i % 2 === 0 ? "#3DB6B1" : "#CCE5CF"},
+                transparent
+              )`,
             }}
           />
         ))}
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center lg:justify-center px-6 md:py-35 lg:py-20 w-full sm:pb-6 md:px-20">
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center lg:justify-center w-full ">
+        {/* Text */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <HeroText />
         </div>
+
+        {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <HeroPic />
         </div>

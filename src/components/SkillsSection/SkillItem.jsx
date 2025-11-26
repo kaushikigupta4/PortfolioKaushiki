@@ -13,23 +13,20 @@ const SkillItem = () => {
   const [skills, setSkills] = useState("programming");
   const skillRef = useRef(null);
 
-  // GSAP animation effect
+  // GSAP animation
   useEffect(() => {
     if (skillRef.current) {
       gsap.fromTo(
         skillRef.current,
-        {
-          opacity: 0,
-          scale: 0.9, // Starts slightly smaller
-        },
+        { opacity: 0, scale: 0.9 },
         {
           opacity: 1,
           scale: 1,
-          duration: 0.5, // Quick but smooth animation
+          duration: 0.5,
           scrollTrigger: {
             trigger: skillRef.current,
-            start: "top 85%", // Appears as soon as it enters viewport
-            toggleActions: "play reverse play reverse", // Smooth re-appear on scroll
+            start: "top 85%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );
@@ -42,16 +39,24 @@ const SkillItem = () => {
 
   return (
     <div ref={skillRef}>
-      {/* Skill Selection Buttons */}
-      <div className="flex flex-col font-bold items-center justify-center w-full mt-4 mb-4 gap-3 md:flex-row">
+
+      {/* Skill Tabs */}
+      <div className="flex flex-col font-bold items-center justify-center w-full mt-4 mb-6 gap-4 md:flex-row">
         {["programming", "web", "developer", "course"].map((skill) => (
           <div
             key={skill}
-            className="group relative w-64  font-bold text-md rounded-lg shadow-md text-center transition-all hover:scale-105 border-[0.5px] border-blue-500"
+            className={`
+              group relative w-64 rounded-xl shadow-sm text-center transition-all 
+              hover:scale-105 cursor-pointer border 
+              ${skills === skill ? "border-[#F6B1CE] bg-[#F6B1CE]/20" : "border-[#F6B1CE] bg-white"}
+            `}
           >
             <p
               data-value={skill}
-              className="text-[#4F75FF] cursor-pointer hover:text-white p-3"
+              className={`
+                p-3 transition-all 
+                ${skills === skill ? "text-[#1581BF]" : "text-[#1581BF] hover:text-[#3DB6B1]"}
+              `}
               onMouseEnter={handleHover}
             >
               {skill === "programming"
@@ -66,7 +71,7 @@ const SkillItem = () => {
         ))}
       </div>
 
-      {/* Display Selected Skill Section */}
+      {/* Selected Skill Content */}
       <div className="w-full lg:text-left sm:text-center p-2">
         {skills === "programming" && <ProgrammingSection />}
         {skills === "developer" && <ToolsSection />}

@@ -9,18 +9,24 @@ const links = [
 
 const NavbarLink = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full gap-6 font-bold py-2 text-xl 
-      md:relative absolute top-[110%] left-[50%] -translate-x-[50%] text-center 
-      bg-[#F8A49B]/40 backdrop-blur-md sm:shadow-lg md:bg-transparent md:backdrop-blur-none md:shadow-none">
-      {links.map((link, index) => (
-        <div key={index} className="group">
-          <Link 
-            className="cursor-pointer hover:transition-all duration-500 text-white hover:text-white"  
-            smooth={true} duration={1000} to={link.section}
+    <div className="flex flex-col md:flex-row gap-6 font-medium text-gray-800">
+      {links.map((l, i) => (
+        <div key={i} className="group cursor-pointer">
+          <Link
+            className="hover:text-[#1581BF] transition"
+            smooth={true}
+            duration={700}
+            to={l.section}
           >
-            {link.link}
+            {l.link}
           </Link>
-          <div className="mx-auto w-0 h-[1px] transition-all duration-500 group-hover:w-full sm:group-hover:w-[100%] bg-[#6146E0]"></div>
+
+          <div
+            className="mx-auto w-0 h-[2px] transition-all duration-300 group-hover:w-full rounded-full"
+            style={{
+              background: "#1581BF", // simple blue underline
+            }}
+          ></div>
         </div>
       ))}
     </div>

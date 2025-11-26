@@ -1,14 +1,39 @@
 import image from "../../assets/Innovation-pana.svg";
 import { motion } from "framer-motion";
+
 const AboutMePic = () => {
   return (
     <div className="relative flex justify-center">
-   
-      <div className="relative overflow-hidden shadow-lg rounded-[80px] w-full max-w-[200px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-[400px] h-[280px] sm:h-[280px] md:h-[400px] lg:h-[500px] mt-9">
-        <motion.img src={image} alt="About Me" className="w-full h-full object-cover" 
-        animate={{ y:[0,-10,0]}}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}/>
-      </div>
+      {/* Blob wrapper */}
+      <motion.div
+        className="relative overflow-hidden "
+        style={{
+          width: "100%",
+          maxWidth: "400px",
+          height: "500px",
+
+          /* Smooth blob shape — fully curved, no straight lines */
+          clipPath: `path(
+            "M160 20
+             C250 -10 360 30 410 110
+             C460 190 450 300 380 370
+             C300 450 180 455 100 400
+             C20 345 -10 250 30 160
+             C60 90 100 40 160 20Z"
+          )`,
+
+         
+        }}
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 2.3, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {/* Image stays full size inside blob */}
+        <img
+          src={image}
+          alt="About Me"
+          className="w-full h-full object-contain p-3"
+        />
+      </motion.div>
     </div>
   );
 };

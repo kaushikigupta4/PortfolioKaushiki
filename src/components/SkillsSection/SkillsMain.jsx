@@ -13,19 +13,15 @@ const SkillsMain = () => {
 
     elements.forEach((el, index) => {
       const screenWidth = window.innerWidth;
-
-      let moveY = 100; // Default movement
+      let moveY = 100;
 
       if (screenWidth <= 360) {
-        moveY = index % 2 === 0 ? -100 : 100; // Alternate top-bottom animation for 360px screens
+        moveY = index % 2 === 0 ? -100 : 100;
       }
 
       gsap.fromTo(
         el,
-        {
-          opacity: 0,
-          y: moveY, // Move from top (-100) or bottom (+100)
-        },
+        { opacity: 0, y: moveY },
         {
           opacity: 1,
           y: 0,
@@ -45,29 +41,58 @@ const SkillsMain = () => {
 
   return (
     <div
-      className="flex flex-col mx-auto max-w-full justify-between relative sm:p-8 md:p-12 lg:px-[8rem] max-w-[1350px] mt-8"
+      className="
+        flex flex-col mx-auto relative 
+        max-w-[1350px] w-full
+        px-6 sm:px-8 md:px-12 lg:px-28
+        mt-16 py-10
+        bg-white
+      "
       id="skills"
     >
       {/* Skills Heading */}
       <h1
-        id="gsapSkills"
-        className="text-5xl sm:text-6xl font-extrabold text-[#6146E0] text-center mt-8 tracking-wide drop-shadow-[0_0_40px_rgba(90,60,220,0.9)]"
+        className="
+          text-5xl sm:text-6xl font-extrabold 
+          text-center mt-6 mb-12
+        "
+        style={{ color: "#1581BF" }}  // palette blue
       >
         Skills
       </h1>
 
       {/* Skills Content */}
-      <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-10 sm:gap-0">
+      <div className="
+        flex flex-col md:flex-row 
+        items-center sm:justify-between
+        gap-10 sm:gap-0 
+      ">
         <div className="w-full sm:w-1/3 flex justify-center gsapabout">
           <SkillsPic />
         </div>
-        <div className="w-full sm:w-2/3 px-6 text-center sm:text-left gsapabout">
+
+        <div
+          className="
+            w-full sm:w-2/3 
+            px-6 text-center sm:text-left 
+            gsapabout
+            bg-white p-6 rounded-3xl
+          "
+        >
           <SkillsText />
         </div>
       </div>
 
       {/* Skill Items */}
-      <div className="mt-8">
+      <div
+        className="
+          mt-12 
+          bg-white p-6 md:p-8 
+          rounded-3xl shadow-md
+          border border-[#F6B1CE]
+          gsapabout
+        "
+      >
         <SkillItem />
       </div>
     </div>

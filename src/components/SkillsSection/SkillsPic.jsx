@@ -1,9 +1,41 @@
 import image from "../../assets/Application programming interface-amico.svg";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+
 const SkillsPic = () => {
   return (
-    <div className=" rounded-[100px] overflow-hidden w-[320px] h-[420px] flex items-center justify-center mx-auto sm:h-[360px] sm:w-[260px] md:h-[400px] md:w-[300px] lg:h-[500px] lg:w-[400px] p-5">
-      <motion.img src={image} className="object-cover w-full h-full rounded-[100px]" alt="Skills"  />
+    <div className="flex justify-center items-center">
+      <motion.div
+        className="
+          relative overflow-hidden 
+          shadow-md 
+          rounded-3xl 
+          bg-white
+        "
+        style={{
+          width: "100%",
+          maxWidth: "380px",
+          height: "420px",
+          border: "1px solid #CCE5CF",
+
+          /* Soft organic blob */
+          clipPath: `path(
+            "M180 20
+             C260 -5 360 30 400 110
+             C440 190 430 290 360 360
+             C290 430 180 450 110 400
+             C40 350 10 260 40 160
+             C70 80 120 30 180 20Z"
+          )`,
+        }}
+        animate={{ y: [0, -12, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <img
+          src={image}
+          alt="Skills"
+          className="w-full h-full object-contain p-6"
+        />
+      </motion.div>
     </div>
   );
 };
